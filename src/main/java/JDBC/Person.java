@@ -7,6 +7,16 @@ public class Person {
     private String lastName;
     private String address;
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
+
     public Person(String firstName, String lastName, String address) {
         this.id = 0;
         this.firstName = firstName;
