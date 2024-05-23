@@ -7,7 +7,7 @@ public class Main {
         System.out.println("Height: " + triangle.getHeight() + ", Width: " + triangle.getWidth());
         System.out.println("Area: " + triangle.getArea() + ", Circumference: " + triangle.getCircumference());
 
-        triangle.setWidth(420);
+        triangle.setWidth(1);
         triangle.setHeight(69);
 
         System.out.println("Height: " + triangle.getHeight() + ", Width: " + triangle.getWidth());
