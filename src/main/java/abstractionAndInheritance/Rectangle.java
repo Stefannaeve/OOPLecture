@@ -6,13 +6,13 @@ public class Rectangle extends Shape{
         super(width, height);
     }
 
-//    @Override
-//    public int getArea(){
-//        return getWidth()*getHeight();
-//    }
-//
-//    @Override
-//    public int getCircumference(){
-//        return (getWidth()+getHeight())*2;
-//    }
+    @Override
+    public int getArea(){
+        return getWidth()*getHeight();
+    }
+
+    @Override
+    public int getCircumference(){
+        return (getWidth()+getHeight())*2;
+    }
 }

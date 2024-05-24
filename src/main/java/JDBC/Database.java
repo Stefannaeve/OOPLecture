@@ -15,7 +15,7 @@ public class Database {
     // bios = navnet på databasen
     private final String URL = "jdbc:mysql://localhost:3306/bios";
     private final String username = "root";
-    private final String password = "root";
+    private final String password = "12345678";
 
     public Connection getConnection(){
         try {
@@ -57,6 +57,23 @@ public class Database {
 
             // Kjører statementen
             preparedStatement.execute();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void updatePerson(String newFirstName,  int id){
+        try {
+            Connection connection = getConnection();
+            String updateQuery = "update persons set firstName = ? where id = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(updateQuery);
+
+            preparedStatement.setString(1, newFirstName);
+            preparedStatement.setInt(2, id);
+
+
+            preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -154,8 +171,6 @@ public class Database {
     }
 
     public void addPersonImproved(Person person){
-
-
         try {
 
             // Henter connection til databasen

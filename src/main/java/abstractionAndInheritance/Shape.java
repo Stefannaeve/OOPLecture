@@ -1,6 +1,6 @@
 package abstractionAndInheritance;
 
-public class Shape {
+public abstract class Shape {
     private int width;
     private int height;
 
@@ -26,11 +26,7 @@ public class Shape {
         this.height = height;
     }
 
-    public int getArea(){
-        return 0;
-    }
+    public abstract int getArea();
 
-    public int getCircumference(){
-        return 0;
-    }
+    public abstract int getCircumference();
 }

@@ -1,10 +1,10 @@
-package Interface;
+package interfaces;
 
-public class Rectangle implements Shape {
+public class Triangle implements Shape{
     private int width;
     private int height;
 
-    public Rectangle(int width, int height) {
+    public Triangle(int width, int height) {
         this.width = width;
         this.height = height;
     }
@@ -26,12 +26,7 @@ public class Rectangle implements Shape {
     }
 
     @Override
-    public int getArea(){
-        return width*height;
-    }
-
-    @Override
-    public int getCircumference(){
-        return (width+height)*2;
+    public int getArea() {
+        return 0;
     }
 }

@@ -8,6 +8,9 @@ public class Main {
         System.out.println("Area: " + triangle.getArea() + ", Circumference: " + triangle.getCircumference());
 
         Rectangle rectangle = new Rectangle(3, 4);
+        Rectangle rectangle2 = new Rectangle(3, 4);
+        Rectangle rectangle3 = new Rectangle(3, 4);
+        Rectangle rectangle4 = new Rectangle(3, 4);
 
         System.out.println("Height: " + rectangle.getHeight() + ", Width: " + rectangle.getWidth());
         System.out.println("Area: " + rectangle.getArea() + ", Circumference: " + rectangle.getCircumference());

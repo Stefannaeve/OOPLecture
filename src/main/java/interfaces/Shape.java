@@ -1,6 +1,5 @@
-package Interface;
+package interfaces;
 
 public interface Shape {
     int getArea();
-    int getCircumference();
 }

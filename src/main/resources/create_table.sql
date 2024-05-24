@@ -10,3 +10,7 @@ create table Persons (
 );
 
 
+update persons
+set FirstName = ?
+where id = ?
+

@@ -1,12 +1,11 @@
-package Interface;
+package interfaces;
 
-import static java.lang.Math.sqrt;
+public class Square implements Shape{
 
-public class Triangle implements Shape {
     private int width;
     private int height;
 
-    public Triangle(int width, int height) {
+    public Square(int width, int height) {
         this.width = width;
         this.height = height;
     }
@@ -26,14 +25,8 @@ public class Triangle implements Shape {
     public void setHeight(int height) {
         this.height = height;
     }
-
-    @Override
-    public int getArea(){
-        return (width*height)/2;
-    }
-
-    @Override
-    public int getCircumference(){
-        return (width+height)+(int)sqrt(width*width+height*height);
+        @Override
+    public int getArea() {
+        return 0;
     }
 }
