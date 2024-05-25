@@ -1,5 +1,6 @@
 package abstractionAndInheritance;
 
+// abstract Parent(super) class
 public abstract class Shape {
     private int width;
     private int height;
@@ -26,6 +27,9 @@ public abstract class Shape {
         this.height = height;
     }
 
+    // abstract Methods, these do not have a body, as it is expected that
+    // an abstract method is enforced in a child class, which will
+    // add a body
     public abstract int getArea();
 
     public abstract int getCircumference();
