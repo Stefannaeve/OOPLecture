@@ -1,4 +1,4 @@
-package fileReader;
+package JDBC;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,7 +13,7 @@ public class MyFileReader {
             // Lager Filen, pathen begynner fra starten av prosjektet
             File textFile = new File("text.txt");
 
-            // Når du lager en scanner så kan du velge "hva" den scanner
+            // Når du lager en scanner så kan du velge "hva" den leser fra
             // eksempel System.in for terminal input eller en fil
             Scanner scanner = new Scanner(textFile);
 
@@ -26,5 +26,26 @@ public class MyFileReader {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
+
+
+    public Person readPerson(){
+        try {
+            File textFile = new File("persons.txt");
+
+            Scanner scanner = new Scanner(textFile);
+
+            String firstName = scanner.nextLine();
+            String lastName = scanner.nextLine();
+            String address = scanner.nextLine();
+            scanner.nextLine();
+
+            return new Person(firstName, lastName, address);
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 }

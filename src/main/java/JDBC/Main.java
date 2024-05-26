@@ -8,16 +8,12 @@ public class Main {
         Person person = new Person("amund", "Myrbostad", "Oslo");
         Database database = new Database();
         database.addPerson(person);
-//        System.out.println(database.retrievePersonById(1));
-//        for (Person person1 : database.retrievePersonByFirstName("amund")) {
-//            System.out.println(person1);
-//        }
 
-        System.out.println(database.retrievePersonById(5));
+        MyFileReader myFileReader = new MyFileReader();
 
-        database.updatePerson("stefan", 5);
+        Person personFromFile = myFileReader.readPerson();
 
-        System.out.println(database.retrievePersonById(5));
+        database.addPerson(personFromFile);
 
 
     }

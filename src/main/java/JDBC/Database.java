@@ -15,9 +15,9 @@ public class Database {
     // bios = navnet på databasen
     private final String URL = "jdbc:mysql://localhost:3306/bios";
     private final String username = "root";
-    private final String password = "12345678";
+    private final String password = "root";
 
-    public Connection getConnection(){
+    private Connection getConnection(){
         try {
             // Lager connection
             // Om connection ikke fungerer (Feil passord etc) så blir det kastet en exception
