@@ -2,6 +2,7 @@ package JDBC;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MyFileReader {
@@ -45,7 +46,29 @@ public class MyFileReader {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
 
 
+    public ArrayList<Person> readAllPersons(){
+        ArrayList<Person> persons = new ArrayList<>();
+        try {
+            File textFile = new File("persons.txt");
+            Scanner scanner = new Scanner(textFile);
+
+            while(scanner.hasNext()){
+                String firstName = scanner.nextLine();
+                String lastName = scanner.nextLine();
+                String address = scanner.nextLine();
+                scanner.nextLine();
+
+                Person person = new Person(firstName, lastName, address);
+                persons.add(person);
+            }
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        return persons;
     }
 }

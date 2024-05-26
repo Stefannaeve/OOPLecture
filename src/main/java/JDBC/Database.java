@@ -33,7 +33,6 @@ public class Database {
 
     public void addPerson(Person person){
 
-
         try {
 
             // Henter connection til databasen
@@ -61,6 +60,15 @@ public class Database {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    // Lager en metode for å kunne enklere legge til en liste av personer
+    public void addManyPersons(ArrayList<Person> persons){
+        // Vi bare bruker samme metode for å legge til en person men vi kjører den i en forEach loop
+        for (Person person : persons) {
+            addPerson(person);
+        }
+
     }
 
     public void updatePerson(String newFirstName,  int id){
